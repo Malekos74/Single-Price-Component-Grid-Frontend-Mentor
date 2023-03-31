@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('fonts/Karla-Regular.woff2') format('woff2'),
+        url('fonts/Karla-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('fonts/Karla-Bold.woff2') format('woff2'),
+        url('fonts/Karla-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.attribution {
+    display: none;
+}
+
+html {
+    background-color: hsl(204, 43%, 93%);
+    font-family: Karla;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 98vh;
+}
+.card {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'section-1'
+    'section-2'
+    'section-3';
+
+    min-height: 80vh;
+    max-height: 95vh;
+    max-width: 40vh;
+
+    border-radius: 0.5rem;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.303);
+}
+.title {
+    font-size: 0.75rem;
+    color: white;
+}
+.section {
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.69);
+    font-size: 0.9rem;
+}
+.text {
+    width: 35ch;
+    word-spacing: 3px;
+    line-height: 20px;
+}
+
+
+.section-1 {
+    grid-area: section-1;
+
+    background-color: white;
+    border-radius: 0.5rem 0.5rem 0 0;
+    color: hsl(218, 22%, 67%);
+}
+.section-1 h1 {
+    color:hsl(179, 65%, 36%);
+}
+.section-1 h2 {
+    color:hsl(71, 73%, 54%);
+}
+
+
+.section-2 {
+    grid-area: section-2;
+    background-color: hsl(179, 62%, 43%);
+}
+.section-2 h2 {
+    font-size: 2rem;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.section-2 span {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.388);
+}
+button {
+    border: none;
+    border-radius: 0.5rem;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+
+    width: 15rem;
+    height: 3rem;
+
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.303); 
+
+    display: block;
+    margin: auto;
+}
+button:hover{
+    color: snow;
+
+    cursor: pointer;
+    background-color: hsl(71, 65%, 41%);
+
+    width: 14.9rem;
+    height: 2.9rem;
+}
+
+
+
+.section-3 {
+    grid-area: section-3;
+    background-color: hsl(179, 51%, 57%);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.section-3 .text {
+    width: 25ch;
+}
+
+
+@media (min-width:80em) {
+    .card {
+        display: grid;
+        grid-template-rows: 0.25fr 0.7fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        'section-1 section-1'
+        'section-2 section-3';
+
+        max-width: 90vh;
+    }
+    .section {
+        padding: 2rem;
+    }
+    .section-1 .text {
+        width: 80%;
+    }
+    .section-2 {
+        border-radius: 0 0 0 0.5rem ;
+    }
+    .section-3 {
+        border-radius: 0 0 0.5rem 0;
+    }
+      
+
+}
+
+
+
